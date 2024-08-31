@@ -11,10 +11,8 @@ using namespace sf;
 
 // Mes files créés
 #include "config.h"
-#include "boss.h"
 #include "mobs.h"
 #include "missile.h"
-#include "bombe.h"
 #include "player.h"
 #include "collision.h"
 #include "screen.h"
