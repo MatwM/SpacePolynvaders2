@@ -255,7 +255,7 @@ build/main.o: src/main.cpp /usr/include/stdc-predef.h src/main.h \
  /usr/include/SFML/Audio/SoundFileFactory.inl \
  /usr/include/SFML/Audio/SoundFileReader.hpp \
  /usr/include/SFML/Audio/SoundFileWriter.hpp src/config.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h src/boss.h src/mobs.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h src/mobs.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc src/missile.h \
  /usr/include/c++/11/random /usr/include/c++/11/cmath /usr/include/math.h \
@@ -285,7 +285,7 @@ build/main.o: src/main.cpp /usr/include/stdc-predef.h src/main.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/numeric \
  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit \
- /usr/include/c++/11/pstl/glue_numeric_defs.h src/player.h src/bombe.h \
+ /usr/include/c++/11/pstl/glue_numeric_defs.h src/player.h \
  src/collision.h src/screen.h
 src/main.cpp /usr/include/stdc-predef.h src/main.h :
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp :
@@ -544,7 +544,7 @@ src/main.cpp /usr/include/stdc-predef.h src/main.h :
  /usr/include/SFML/Audio/SoundFileFactory.inl :
  /usr/include/SFML/Audio/SoundFileReader.hpp :
  /usr/include/SFML/Audio/SoundFileWriter.hpp src/config.h :
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h src/boss.h src/mobs.h :
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h src/mobs.h :
  /usr/include/c++/11/iostream /usr/include/c++/11/istream :
  /usr/include/c++/11/bits/istream.tcc src/missile.h :
  /usr/include/c++/11/random /usr/include/c++/11/cmath /usr/include/math.h :
@@ -574,5 +574,5 @@ src/main.cpp /usr/include/stdc-predef.h src/main.h :
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h :
  /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/numeric :
  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit :
- /usr/include/c++/11/pstl/glue_numeric_defs.h src/player.h src/bombe.h :
+ /usr/include/c++/11/pstl/glue_numeric_defs.h src/player.h :
  src/collision.h src/screen.h :

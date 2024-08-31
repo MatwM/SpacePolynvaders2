@@ -7,7 +7,6 @@ bool Collision(Sprite sprite1, Sprite sprite2){
         return false;
 }
 
-
 bool CollisionPlayerMob(Player player, Mob mob){
     if (Collision(player.getSprite(), mob.getSprite())){
         return true;

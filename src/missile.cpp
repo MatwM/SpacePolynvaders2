@@ -25,3 +25,55 @@ void Missiles::NewMissile(Sprite spriteMissile){
         //std::cerr << "Cannot add more missiles, maximum capacity reached!" << std::endl;
     }
 }
+
+void Missiles::ForwardAll(){
+    for (int i = 0; i < _nmax; i++) {
+        if (_missiles[i].getInmap() == true){
+            _missiles[i].Forward1();
+            if (_missiles[i].getInmap() == false){
+                _n --;
+            }
+        }
+    }
+}
+
+void Missiles::BackwardAll(float mult){
+    for (int i = 0; i < _nmax; i++) {
+        if (_missiles[i].getInmap() == true){
+            _missiles[i].Backward1(mult);
+            if (_missiles[i].getInmap() == false){
+                _n --;
+            }
+        }
+    }
+}
+
+void Missile::Deviation1(){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(-4*SPEED_MISSILE, 4*SPEED_MISSILE);
+    int randomNumber = dis(gen);
+        _x = randomNumber;
+        _spriteMissile.move(randomNumber,0);
+}
+
+void Missiles::DeviationAll(){
+    for (int i = 0; i < _nmax; i++) {
+        if (_missiles[i].getInmap() == true){
+            _missiles[i].Deviation1();
+            if (_missiles[i].getInmap() == false){
+                _n --;
+            }
+        }
+    }
+}
+
+void Missiles::reset(int mode) {
+    // Réinitialiser le nombre de missiles
+    _n = 0;
+    _mode = mode;
+    // Réinitialiser l'état de tous les missiles
+    for (int i = 0; i < _nmax; i++) {
+        _missiles[i].DesactivMissile();
+    }
+}

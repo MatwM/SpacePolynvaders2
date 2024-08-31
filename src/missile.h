@@ -86,15 +86,6 @@ inline void Missile::Forward1(){
     if (_y < 0) _inmap = false;
 }
 
-inline void Missile::Deviation1(){
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(-4*SPEED_MISSILE, 4*SPEED_MISSILE);
-    int randomNumber = dis(gen);
-        _x = randomNumber;
-        _spriteMissile.move(randomNumber,0);
-}
-
 inline void Missile::Backward1(float mult){
     _y += SPEED_MISSILE*mult;
     _spriteMissile.move(0, +SPEED_MISSILE*mult);
@@ -110,39 +101,6 @@ inline Missiles::Missiles(int nmax, int mode){
 
 inline Missiles::~Missiles(){
     delete[] _missiles;
-}
-
-inline void Missiles::ForwardAll(){
-    for (int i = 0; i < _nmax; i++) {
-        if (_missiles[i].getInmap() == true){
-            _missiles[i].Forward1();
-            if (_missiles[i].getInmap() == false){
-                _n --;
-            }
-        }
-    }
-}
-
-inline void Missiles::BackwardAll(float mult){
-    for (int i = 0; i < _nmax; i++) {
-        if (_missiles[i].getInmap() == true){
-            _missiles[i].Backward1(mult);
-            if (_missiles[i].getInmap() == false){
-                _n --;
-            }
-        }
-    }
-}
-
-inline void Missiles::DeviationAll(){
-    for (int i = 0; i < _nmax; i++) {
-        if (_missiles[i].getInmap() == true){
-            _missiles[i].Deviation1();
-            if (_missiles[i].getInmap() == false){
-                _n --;
-            }
-        }
-    }
 }
 
 inline void Missiles::setPlayer(Player *player){
@@ -169,13 +127,4 @@ inline Missile* Missiles::getMissile(int n){
     return &_missiles[n];
 }
 
-inline void Missiles::reset(int mode) {
-    // Réinitialiser le nombre de missiles
-    _n = 0;
-    _mode = mode;
-    // Réinitialiser l'état de tous les missiles
-    for (int i = 0; i < _nmax; i++) {
-        _missiles[i].DesactivMissile();
-    }
-}
 #endif

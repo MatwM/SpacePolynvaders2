@@ -13,4 +13,4 @@ void loadingScreen(RenderWindow& window);
 void Intro(RenderWindow& window);
 
 
-#endif//void player_move(Player *player);
+#endif
